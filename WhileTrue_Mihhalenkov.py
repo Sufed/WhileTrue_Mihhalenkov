@@ -1,3 +1,4 @@
+from random import *
 #1
 for i in range(2, 12, 3):
     print(i, end=" ")
@@ -7,15 +8,15 @@ for i in range(12, 2, -2):
 print()
 #2.1
 print("Arvuta peast! ...4*100-55")
-o_vastus=4*100-55
-vastus=int(input("Lahenda ülesanne..."))
-k=1
-while vastus!=o_vastus:
-    print("Viga! Sisesta Õige vastus...", )
-    break
-    vastus=int(input("Sisesta vastus..."))
-    k+=1
-print("Õige vastus! Katsed oli ...",k )
+o_vastus = 4*100-55
+while True:
+    vastus = int(input("Lahenda Ã¼lesanne ..."))
+    if vastus == o_vastus:
+        print("Ã•ige vastus! Katsed oli ...", o_vastus)
+        break
+    else:
+        print("Viga! Sisesta Ã•ige vastus on ...", )
+        o_vastus+= 1
 #2.2
 x=0
 while x<30:
